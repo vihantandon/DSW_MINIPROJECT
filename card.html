@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .container{
+            display: grid;
+            place-items: center;
+            margin-inline: 1.5rem;
+            padding-block: 5rem;
+        }
+
+        .card_container{
+            display: grid;
+            row-gap: 3.5rem;
+            cursor: pointer;
+        }
+
+        .card_article{
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card_data{
+            width: 120px;
+            background-color: rgb(228, 223, 223);
+            padding: 1.5rem 2rem;
+            box-shadow:  3px 3px 8px 0px #9f9f9f;
+            border-radius: 1rem;
+            position: absolute;
+            bottom: -8rem;
+            left: 0;
+            right: 0;
+            margin-inline: auto;
+            opacity: 0;
+            transition: opacity 1s 1s;
+        }
+
+        .card_desc{
+            font-size: small;
+            margin-bottom: .25rem;
+        }
+
+        .card_title{
+            font-size: 900;
+            font-weight: 500;
+            color: rgb(70, 70, 70);
+            margin-bottom: .75rem;
+        }
+        img{
+        height: 200px;
+        width: 200px;
+        border-radius: 1.5rem;
+        }
+
+        .card_article:hover .card_data{
+            animation: showdata 1s forwards;
+            opacity: 1;
+            transition: opacity .5s;
+        }
+
+        .card_article:hover{
+            animation: removeoverflow 2s forwards;
+        }
+
+        .card_article:not(:hover){
+            animation: showoverflow 2s forwards;
+        }
+
+        .card_article:not(:hover) .card_data{
+            animation: removedata 1s forwards;
+        }
+        @keyframes showdata {
+            50%{
+                transform: translateY(-10rem);
+            }
+            100%{
+                transform: translateY(-7rem);
+            }
+        }
+
+        @keyframes removeoverflow{
+            to{
+                overflow: visible;
+            }
+        } 
+
+        @keyframes removedata {
+            0%{
+                transform: translateY(-7rem);
+            }
+            50%{
+                transform: translateY(-10rem);
+            }
+            100%{
+                transform: translateY(.5rem);
+            }
+        }
+
+        @keyframes showoverflow {
+            0%{
+                overflow: visible;
+                pointer-events: none;
+            }
+            50%{
+                overflow: hidden;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card_container">
+            <article class="card_article">
+                <img src="https://tse2.mm.bing.net/th?id=OIP.0QZ_qxfALNi1m0eZP8zldwHaHa&pid=Api&P=0&h=220" alt="plant">
+
+                <div class="card_data">
+                    <span class="card_desc">
+                        <h2 class="card_title">Benjamine Ficus</h2> 
+                    </span>
+                </div>
+            </article>
+
+            <article class="card_article">
+                <img src="https://tse2.mm.bing.net/th?id=OIP.0QZ_qxfALNi1m0eZP8zldwHaHa&pid=Api&P=0&h=220" alt="plant">
+
+                <div class="card_data">
+                    <span class="card_desc">
+                        <h2 class="card_title">Benjamine Ficus</h2> 
+                    </span>
+                </div>
+            </article>
+
+            <article class="card_article">
+                <img src="https://tse2.mm.bing.net/th?id=OIP.0QZ_qxfALNi1m0eZP8zldwHaHa&pid=Api&P=0&h=220" alt="plant">
+
+                <div class="card_data">
+                    <span class="card_desc">
+                        <h2 class="card_title">Benjamine Ficus</h2> 
+                    </span>
+                </div>
+            </article>
+        </div>
+    </div>
+</body>
+</html>
