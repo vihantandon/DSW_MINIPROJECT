@@ -36,6 +36,7 @@ function openModal(item) {
     const modalTitle = document.getElementById("modalTitle");
     const modalDescription = document.getElementById("modalDescription");
     const modalPrice = document.getElementById("modalPrice");
+    const addToCartBtn = document.getElementById("addToCartBtn");
 
     // Set the modal content
     modalImage.src = item.imgUrl;
@@ -43,20 +44,31 @@ function openModal(item) {
     modalDescription.innerText = item.description;
     modalPrice.innerText = `$${item.price}`;
 
-    modal.style.display = "block"; // Show the modal
+    // Show the modal and make the Add to Cart button visible with animation
+    modal.style.display = "block";
+    setTimeout(() => addToCartBtn.classList.add("visible"), 50); // Animate the button
 
     // Close the modal when the close button is clicked
     const closeBtn = document.getElementById("closeBtn");
     closeBtn.addEventListener("click", () => {
-        modal.style.display = "none"; // Hide the modal
+        modal.style.display = "none";
+        addToCartBtn.classList.remove("visible"); // Hide the button when closing the modal
     });
 
-    // Close the modal if clicked outside of the modal content
-    window.onclick = function(event) {
-        if (event.target == modal) {
+    // Close the modal if clicking outside the modal content
+    window.addEventListener("click", (event) => {
+        if (event.target === modal) {
             modal.style.display = "none";
+            addToCartBtn.classList.remove("visible");
         }
-    }
+    });
+
+    // Add to Cart Button Action (example)
+    addToCartBtn.addEventListener("click", () => {
+        alert(`${item.title} has been added to your cart!`);
+        modal.style.display = "none";
+        addToCartBtn.classList.remove("visible");
+    });
 }
 
 // Event listener for dropdown filter
