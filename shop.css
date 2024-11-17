@@ -180,9 +180,32 @@ body {
     transition: transform 0.7s ease;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .modal_content {
-        width: 90%;
+@media (max-width:980px){
+
+    .container{
+        margin-inline: 0.5rem;
     }
+.card_container{
+    justify-content:space-around;
+}
+.card_article{
+    margin: 10px;
+}
+
+.background>img{
+    height: 60vh;
+    width: 60vw;
+    object-fit: cover;
+}
+
+img{
+    height: 180px;
+    width: 160px;
+    border-radius: 1.5rem;
+}
+
+.card_data{
+    width: 80px;
+    height: 95px;
+}
 }
