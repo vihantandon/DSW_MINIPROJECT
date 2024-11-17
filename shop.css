@@ -1,10 +1,13 @@
-*{
+/* General Styles */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-body{
-    background-color: orangered;
+body {
+    background-color: #34A853;
+    font-family: 'Roboto', sans-serif;
 }
 
 .search-form {
@@ -27,12 +30,12 @@ body{
     width: 100vw;
     height: 60vh;
     display: flex;
-    justify-content:space-around;
+    justify-content: space-around;
     align-items: center;
-    background-color: aqua;
+    background-color: #2C6E49;
 }
 
-.background>img{
+.background > img {
     height: 60vh;
     width: 78vw;
     object-fit: cover;
@@ -47,9 +50,9 @@ body{
 
 .card_container {
     display: flex;
-    justify-content: space-between; 
-    width: 100%; 
-    max-width: 1200px; 
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
     cursor: pointer;
     flex-wrap: wrap;
 }
@@ -58,120 +61,103 @@ body{
     position: relative;
     overflow: hidden;
     margin: 1% 1rem;
+    width: 200px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.card_data{
-    width: 120px;
-    background-color: rgb(228, 223, 223);
-    padding: 1.5rem 2rem;
-    box-shadow:  3px 3px 8px 0px #9f9f9f;
-    border-radius: 1rem;
+.card_article img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px 15px 0 0;
+}
+
+.card_data {
+    width: 100%;
+    padding: 15px;
+    background-color: #fff;
     position: absolute;
     bottom: -8rem;
-    left: 5%;
-    right: 100%;
+    left: 0;
+    right: 0;
     margin-inline: auto;
     opacity: 0;
-    transition: opacity 1s 1s;
+    transition: opacity 0.3s ease, bottom 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.card_desc{
-    font-size: small;
-    margin-bottom: .25rem;
+.card_article:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
 }
 
-.card_title{
-    font-size: 900;
-    font-weight: 500;
-    color: rgb(70, 70, 70);
-    margin-bottom: .75rem;
-}
-img{
-height: 200px;
-width: 200px;
-border-radius: 1.5rem;
-}
-
-.card_article:hover .card_data{
-    animation: showdata 1s forwards;
+.card_article:hover .card_data {
     opacity: 1;
-    transition: opacity .5s;
+    bottom: 0;
 }
 
-.card_article:hover{
-    animation: removeoverflow 2s forwards;
+.card_title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #34A853;
 }
 
-.card_article:not(:hover){
-    animation: showoverflow 2s forwards;
+.card_desc {
+    font-size: 0.9rem;
+    color: #666;
 }
 
-.card_article:not(:hover) .card_data{
-    animation: removedata 1s forwards;
+/* Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4); /* Black with transparency */
+    transition: opacity 0.5s ease;
 }
-@keyframes showdata {
-    50%{
-        transform: translateY(-10rem);
+
+.modal_content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 70%;
+    max-width: 800px;
+    text-align: center;
+}
+
+.modal img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+#closeBtn {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    cursor: pointer;
+}
+
+#closeBtn:hover,
+#closeBtn:focus {
+    color: black;
+    text-decoration: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .modal_content {
+        width: 90%;
     }
-    100%{
-        transform: translateY(-7rem);
-    }
-}
-
-@keyframes removeoverflow{
-    to{
-        overflow: visible;
-    }
-} 
-
-@keyframes removedata {
-    0%{
-        transform: translateY(-7rem);
-    }
-    50%{
-        transform: translateY(-10rem);
-    }
-    100%{
-        transform: translateY(.5rem);
-    }
-}
-
-@keyframes showoverflow {
-    0%{
-        overflow: visible;
-        pointer-events: none;
-    }
-    50%{
-        overflow: hidden;
-    }
-}
-
-@media (max-width:980px){
-
-    .container{
-        margin-inline: 0.5rem;
-    }
-.card_container{
-    justify-content:space-around;
-}
-.card_article{
-    margin: 10px;
-}
-
-.background>img{
-    height: 60vh;
-    width: 60vw;
-    object-fit: cover;
-}
-
-img{
-    height: 180px;
-    width: 160px;
-    border-radius: 1.5rem;
-}
-
-.card_data{
-    width: 80px;
-    height: 95px;
-}
 }
