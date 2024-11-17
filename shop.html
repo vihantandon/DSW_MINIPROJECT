@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Fresh Flowers & Plants</title>
     <link rel="stylesheet" href="shop.css">
 </head>
 <body>
@@ -11,7 +11,6 @@
         <p>FRESH FLOWERS AND PLANTS</p>
         <img src="images/image.png" alt="bg img">
     </div>
-    
 
     <select id="plantFilter">
         <option value="all">All Plants</option>
@@ -24,18 +23,21 @@
 
     <div class="container">
         <div class="card_container">
-            <!-- <article class="card_article">
-                <img src="https://tse2.mm.bing.net/th?id=OIP.0QZ_qxfALNi1m0eZP8zldwHaHa&pid=Api&P=0&h=220" alt="plant">
-
-                <div class="card_data">
-                    <span class="card_desc">
-                        <h2 class="card_title">Benjamine Ficus</h2> 
-                    </span>
-                </div>
-            </article> -->
-
+            <!-- Dynamic plant cards will be inserted here using js-->
         </div>
     </div>
+
+    <!-- Plant details modal (hidden by default) -->
+    <div id="plantDetailModal" class="modal">
+        <div class="modal_content">
+            <span id="closeBtn" class="close">&times;</span>
+            <img id="modalImage" src="" alt="plant image">
+            <h2 id="modalTitle"></h2>
+            <p id="modalDescription"></p>
+            <p id="modalPrice"></p>
+        </div>
+    </div>
+
     <script src="shop.js"></script>
 </body>
 </html>
