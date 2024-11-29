@@ -1,0 +1,53 @@
+[
+    {
+        "title": "Pruning sheares",
+        "imgUrl": "plantcareimages/pruningsheares.jpg",
+        "price": "Rs. 800"
+    },
+    {
+        "title": "Shovel",
+        "imgUrl": "plantcareimages/shovel.jpg",
+        "price": "Rs. 800"
+    },
+    {
+        "title": "Gardening fork",
+        "imgUrl": "plantcareimages/fork.jpg",
+        "price": "Rs. 200"
+    },
+    {
+        "title": "Gardening knife",
+        "imgUrl": "plantcareimages/knife.jpg",
+        "price": "Rs. 200"
+    },
+    {
+        "title": "Seed Starter kit",
+        "imgUrl": "plantcareimages/seedkit.jpg",
+        "price": "Rs. 200"
+    },
+    {
+        "title": "Vermicompost",
+        "imgUrl": "plantcareimages/vermicompost.jpg",
+        "price": "Rs. 200"
+    },
+    {
+        "title": "Cowdung",
+        "imgUrl": "plantcareimages/cowdung.jpg",
+        "price": "Rs. 200"
+    },
+    {
+        "title": "Potting mat",
+        "imgUrl": "plantcareimages/pottingmat.jpg",
+        "price": "Rs. 200"
+    },
+    {
+        "title": "Cocopeat",
+        "imgUrl": "plantcareimages/cocopeat.jpg",
+        "price": "Rs. 200"
+    },
+    {
+        "title": "Fertilizer",
+        "imgUrl": "plantcareimages/fertilizers.jpg",
+        "price": "Rs. 200"
+    }
+    
+]
