@@ -1,0 +1,47 @@
+[
+    {
+        "title": "Wooden plant stand",
+        "imgUrl": "plantaccessoriesimages/woodenplantstand.png",
+        "price": "Rs. 1500"
+    },
+    {
+        "title": "Moss pole",
+        "imgUrl": "plantaccessoriesimages/mosspole.jpg",
+        "price": "Rs. 200"
+    },
+    {
+        "title": "Plant saucer",
+        "imgUrl": "plantaccessoriesimages/plantsaucer.jpg",
+        "price": "Rs. 500"
+    },
+    {
+        "title": "Watering can",
+        "imgUrl": "plantaccessoriesimages/watercan.jpg",
+        "price": "Rs. 400"
+    },
+    {
+        "title": "Grow light",
+        "imgUrl": "plantaccessoriesimages/growlight.jpg",
+        "price": "Rs. 400"
+    },
+    {
+        "title": "Decorative pebbles",
+        "imgUrl": "plantaccessoriesimages/pebbles.jpg",
+        "price": "Rs. 200"
+    },
+    {
+        "title": "Misting bottles",
+        "imgUrl": "plantaccessoriesimages/bottles.jpg",
+        "price": "Rs. 300"
+    },
+    {
+        "title": "Hanging planters",
+        "imgUrl": "plantaccessoriesimages/hanging.jpg",
+        "price": "Rs. 300"
+    },
+    {
+        "title": "Plant caddy",
+        "imgUrl": "plantaccessoriesimages/plantcaddy.jpg",
+        "price": "Rs. 300"
+    }
+]
