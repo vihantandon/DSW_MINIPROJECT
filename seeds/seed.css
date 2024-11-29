@@ -1,0 +1,244 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #feeccb;
+    width: 100%;
+    }
+
+
+    .slider {
+        position: relative;
+        width: 100%;
+        height: 150px; /* Same height as the images */
+        overflow: hidden;
+    }
+    
+    .slider img {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+    }
+    
+    .slider img.active {
+        opacity: 1;
+        position: relative;
+    }
+    
+    .slider button {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        /* border: 2px solid black; */
+        border-radius: 50%;
+        background: rgba(34, 54, 39, 0.5);
+        color: white;
+        border: none;
+        cursor: pointer;
+        padding: 5px 10px;
+        z-index: 1;
+        
+    }
+    
+    .slider .prev {
+        left: 10px;
+    }
+    
+    .slider .next {
+        right: 10px;
+    }
+    
+
+    .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #f4f4f4;
+        padding: 10px 20px;
+        border-bottom: 1px solid #ddd;
+        position: fixed;
+        width: 95vw;
+        z-index: 1;
+      }
+    
+      .navbar img {
+        height: 50px;
+      }
+    
+    .seedimg{
+        width: 100vw;
+        margin: -19px;
+    }
+
+    #preloader{
+        background :white url(flower_puzzles_preloader_for_dribble.gif) no-repeat center center;
+        position: fixed;
+        background-size: 50%;
+        width: 100%;
+        height: 100vh;
+    }
+    
+    .nav{
+        height: 25px;
+        width: 130px;
+        align-items: right;
+        text-align: center;
+        transition: transform 0.5s;
+        margin-top: 0%;
+        font-weight: 900;
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    .nav>a{
+        text-decoration: none;
+        color: chocolate;
+    }
+    
+    .nav:hover{
+        transform: scale(1.1);
+        border-radius: 50px 50px 0px 0px;
+        background-color :rgb(203, 203, 203);
+    }
+    
+    .page_divider{
+        margin-top: 70px;
+        margin-bottom: 40px;
+        width : 80vw;
+        grid-template-columns: repeat(4,5fr);
+        display: grid;
+        gap : 25px;
+        justify-items: center;
+        align-items: center;
+    }
+
+    .catalogue {
+        display: grid;
+        grid-template-columns: repeat(4,1fr); 
+        gap: 30px; 
+        margin: 10px auto;
+        padding: 10px;
+        height: 100%;
+        max-width: 1200px; 
+        justify-content: center; 
+    }
+    
+    .catalogue .card {
+        cursor: pointer;
+        font-size: 16px; /* Adjusted for better scaling */
+        border: 1px none #ccc; /* Light border */
+        box-shadow: 0 4px 6px rgba(1, 61, 38, 0.591), 0 1px 3px rgba(1, 61, 38, 0.591);
+        padding: 15px;
+        height: auto;
+        text-align: center;
+        background-color: #ffffff; /* Light background for cards */
+        border-radius: 8px; /* Rounded corners */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+        transition: transform 0.3s, box-shadow 0.3s; /* Smooth hover effect */
+    }
+    
+    .catalogue .card:hover {
+        transform: scale(1.05); /* Slight zoom on hover */
+        box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+    
+    }
+    
+    .catalogue .card img {
+        width: 80%;
+        height:auto;
+        border: 2px solid wheat;
+        border-radius: 5px; /* Optional: rounding for the image */
+        margin-bottom: 10px; /* Space below the image */
+        box-shadow: 0 6px 8px rgba(41, 43, 41, 0.516), 0 1px 3px rgba(23, 25, 24, 0.516);
+    }
+    
+    .catalogue .card p {
+        margin: 10px 0;
+        font-size: 1.5em;
+        top: 5vh;
+        color: rgb(61, 41, 5);
+        border-top: 1px dotted rgb(1, 84, 12);
+        border-bottom: 1px dotted rgb(1, 84, 12);
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    
+    
+    .catalogue .card p.price {
+        font-size: 1em;
+        font-weight: bold;
+        color: #110505;
+    
+    }
+    
+    .about_us{
+        margin-bottom: 100px;
+        margin-right: 50px;
+        width : 100%;
+        height: 300px;
+        grid-template-columns: repeat(4,1fr);
+        display: grid;
+        gap : 20px;
+        justify-items: center;
+        align-items: center;
+        background-color :rgba(141, 201, 3, 0.895)
+    }
+    
+    .socials-container{
+        background-color: rgb(232, 232, 232);
+    }
+    
+    .popup .overlay{
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        width : 100vw;
+        height: 100vh;
+        background: rgba(0,0,0,0.7);
+        z-index: 1;
+        display: none;
+    }
+    
+    .popup .content{
+        position : absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%) scale(0.7);
+        background: #fff;
+        width: 500px;
+        height: 500px;
+        z-index: 2;
+        text-align: left;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+    
+    .popup .close{
+        cursor: pointer;
+        position : absolute;
+        right: 20px;
+        top: 20px;
+        width: 30px;
+        height: 30px;
+        background-color: #222;
+        color: #fff;
+        font-size: 25px;
+        font-weight: 600;
+        line-height: 30px;
+        text-align: center;
+        border-radius: 50%;
+    }
+    
+    .popup.active .overlay{
+        display: block;
+    }
+    
+    .popup.active .content{
+        transition: all 300ms ease-in-out;
+        transform: translate(-50%,-50%) scale(1);
+    }
+    
+    

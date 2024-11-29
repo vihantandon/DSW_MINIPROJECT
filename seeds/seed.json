@@ -1,0 +1,56 @@
+[
+    {
+        "title": "Sunflower",
+        "imgUrl1": "seedimages/sunseeds.png",
+        "imgUrl2": "seedimages/sunflower.jpg",
+        "price": "Rs. 100"
+    },
+    {
+        "title": "Marigold",
+        "imgUrl1": "seedimages/mariseeds.png",
+        "imgUrl2": "seedimages/marigoldimg.png",
+        "price": "Rs. 100"
+    },
+    {
+        "title": "Red rose",
+        "imgUrl1": "seedimages/redroseseed.jpg",
+        "imgUrl2": "seedimages/redrose.jpg",
+        "price": "Rs. 100"
+    },
+    {
+        "title": "Morning glory",
+        "imgUrl1": "seedimages/morninggloryseeds.jpg",
+        "imgUrl2": "seedimages/morningglory.jpg",
+        "price": "Rs. 100"
+    },
+    {
+        "title": "Poppy",
+        "imgUrl1": "seedimages/poppyseeds.jpg",
+        "imgUrl2": "seedimages/poppy.jpg",
+        "price": "Rs. 100"
+    },
+    {
+        "title": "Petunia",
+        "imgUrl1": "seedimages/petuniaseeds.jpg",
+        "imgUrl2": "seedimages/petunia.jpg",
+        "price": "Rs. 100"
+    },
+    {
+        "title": "Cosmos",
+        "imgUrl1": "seedimages/cosmosseeds.jpg",
+        "imgUrl2": "seedimages/cosmos.jpg",
+        "price": "Rs. 100"
+    },
+    {
+        "title": "Conflower",
+        "imgUrl1": "seedimages/conflowerseeds.jpg",
+        "imgUrl2": "seedimages/coneflower.jpg",
+        "price": "Rs. 100"
+    },
+    {
+        "title": "Snapdragon",
+        "imgUrl1": "seedimages/snapdragonseeds.jpg",
+        "imgUrl2": "seedimages/snapdragon.jpg",
+        "price": "Rs. 100"
+    }
+]
